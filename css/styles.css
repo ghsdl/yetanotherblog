@@ -281,7 +281,7 @@ nav {
     'content img'
     'author img'
     'details img';
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .categories article h3,
@@ -325,4 +325,84 @@ nav {
   grid-template-columns: 50px auto;
   place-items: center center;
   margin-bottom: 1rem;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr;
+    place-items: center center;
+    line-height: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header > ul {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header > ul > li > button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav > a {
+    padding: 0.5rem 0.8rem 0 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .articles {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .articles > article:first-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .articles > article:last-child {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .subscription {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+      'img'
+      'h1'
+      'p'
+      'form'
+      'img'
+      'img';
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .popular {
+    display: none;
+  }
 }
