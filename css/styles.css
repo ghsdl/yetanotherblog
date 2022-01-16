@@ -55,6 +55,7 @@ hr {
   border-bottom: 1px solid var(--gray);
   margin: 2rem 0 2rem 0;
 }
+
 ::placeholder {
   color: var(--gray-hint);
   text-align: center;
@@ -91,6 +92,13 @@ hr {
 .fa-star {
   color: var(--yellow);
   margin: 0 0.5rem 0 0.5rem;
+}
+
+.underline {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 /* button effect */
@@ -250,4 +258,71 @@ nav {
 
 .subscription > form > button {
   padding: 0.9rem 1.5rem;
+}
+
+/* content */
+
+.content {
+  margin: 2rem 0 2rem 0;
+  display: flex;
+  align-items: start;
+}
+
+.categories {
+  flex: auto;
+}
+
+.categories > article {
+  display: grid;
+  grid-template-columns: auto 150px;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    'title img'
+    'content img'
+    'author img'
+    'details img';
+    margin-bottom: 3rem;
+}
+
+.categories article h3,
+.categories article p {
+  margin: 0.2rem 0;
+}
+
+.categories > article > img {
+  grid-area: img;
+}
+
+.categories > article > h3 {
+  grid-area: title;
+}
+
+.categories > article > p:first-child {
+  grid-area: content;
+}
+
+.categories > article > .article-author {
+  grid-area: author;
+}
+
+.categories > article > .text-hint {
+  grid-area: details;
+}
+
+.categories > article > .article-content {
+  padding-right: 1rem;
+}
+
+.popular {
+  flex: 750px;
+  padding: 0 3rem;
+  position: sticky;
+  top: 45px;
+}
+
+.popular > ul > li {
+  display: grid;
+  grid-template-columns: 50px auto;
+  place-items: center center;
+  margin-bottom: 1rem;
 }
