@@ -4,9 +4,7 @@
   --primary: #d01012;
   --yellow: #ffcf00;
   --dark: #333;
-  --secondary: #0d0d0d;
   --gray: #ddd;
-  --gray-light: #eee;
   --gray-hint: #555;
 }
 
@@ -325,6 +323,19 @@ nav {
   grid-template-columns: 50px auto;
   place-items: center center;
   margin-bottom: 1rem;
+}
+
+/* footer */
+
+footer {
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+  color: var(--dark);
+}
+
+footer > p:last-child {
+  margin-top: 1rem;
+  font-size: .8rem;
 }
 
 /* responsive */
